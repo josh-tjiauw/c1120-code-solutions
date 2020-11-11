@@ -1,0 +1,9 @@
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+}
+
+p {
+  font-family: 'Syne Mono', monospace;
+  line-height: 1.3rem;
+  max-width: 600px;
+}
