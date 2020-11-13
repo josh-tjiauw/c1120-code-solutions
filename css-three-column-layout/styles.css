@@ -1,0 +1,56 @@
+body {
+  background-color: #1996da;
+}
+
+.container {
+  max-width: 1920px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 100px;
+}
+
+.col-full {
+  color: white;
+  font-family: 'Lato';
+  font-size: 30px;
+}
+
+.col-third-picture {
+  display: flex;
+  justify-content: center;
+  width: calc(100%/3);
+  border: solid white 10px;
+  background-color: white;
+  border-radius: 1000px;
+  padding: 50px;
+  margin: auto 150px;
+
+}
+
+img {
+  width: 100%;
+}
+
+.col-third-text {
+  width: calc(100%/3);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto 100px;
+  font: 'Lato';
+  color: white;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.paragraph {
+  font-size: 24px;
+  font-weight: normal;
+}
