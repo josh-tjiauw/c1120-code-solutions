@@ -48,8 +48,8 @@
 
 .line {
   background-color: #e9ebee;
-  height: 2px;
-  width: 1903x;
+  height: 3px;
+  width: 1903px;
   position: absolute;
   top: 75px;
 }
@@ -75,17 +75,17 @@
 
 .get-started-header {
   font-family: 'Tiempos Headline';
-  font-size: 60px;
+  font-size: 56px;
   font-weight: lighter;
   color: white;
   position: absolute;
-  top: 50px;
+  top: 100px;
   left: 50px;
 }
 
 .get-started-paragraph {
   font-family: 'Avenir';
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   position: absolute;
   top: 300px;
@@ -120,12 +120,14 @@
 
 .pref-heading {
   font-family: 'Tiempos Headline';
-  color: #525351;
+  color: #6e6e6e;
+  background-color: white;
 }
 
 .pref-heading2 {
   font-family: 'Avenir';
-  color: #525351;
+  color: #949494;
+  background-color: white;
 }
 
 .row-four {
@@ -137,22 +139,41 @@
 
 .column-locations-half {
   font-family: 'Avenir';
-  color: #525351;
+  color: #949494;
+  line-height: 50px;
 }
 
 .row-five {
   display: flex;
   margin: 100px 300px;
   justify-content: space-between;
+  position: relative;
+}
+
+.heading-learnmore {
+  font-family: 'Tiempos Headline';
+  color: #6e6e6e;
+  background-color: white;
+  font-size: 40px;
+}
+
+.heading2-learnmore {
+  font-family: 'Avenir';
+  color: #949494;
+  background-color: white;
+  font-size: 18px;
 }
 
 .get-started-button2 {
-  font-size: 36px;
+  font-size: 30px;
   color: white;
   background-color: #294463;
   border: none;
   border-radius: 10px;
   padding: 20px 60px;
+  position: absolute;
+  top: 30px;
+  right: 1px;
 }
 
 .row-six {
@@ -163,6 +184,10 @@
 .column-info-third {
   position: relative;
   margin: 100px 50px;
+}
+
+.column-info-third img {
+  margin-bottom: 50px;
 }
 .bg-gray {
   background-color: #525351;
@@ -186,6 +211,13 @@
 .footer {
   display: inline;
   margin: 100px 300px;
+  background-color: white;
+}
+
+.footer > span {
+  position: relative;
+  width: 200px;
+  right: 125px;
 }
 
 .clear-buttons-white {
@@ -203,5 +235,5 @@
   color: #525351;
   border: none;
   background-color: white;
-  margin-top: 30px;
+  margin: 25px 25px;
 }
