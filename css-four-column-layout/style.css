@@ -1,0 +1,43 @@
+.container {
+  max-width: 1920px;
+}
+
+body {
+  margin: auto 200px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  line-height: 2;
+}
+
+.col-one-fourth {
+  display: flex;
+  width: 25%;
+  margin: auto;
+}
+
+.col-one-fourth > img {
+  width: 100%;
+}
+
+.orange-icons {
+  display: flex;
+  width: 25%;
+}
+
+.orange-icons > img {
+  width: 25%;
+  margin: auto;
+}
+
+.text {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+}
