@@ -4,6 +4,7 @@
 }
 
 .header {
+.row-one {
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -12,6 +13,10 @@
 }
 
 .column-canvas-logo img {
+.background {
+  background-color: white;
+}
+.column-canvasHeader img {
   height: 50px;
   width: 150px;
   position: absolute;
@@ -26,6 +31,7 @@
 }
 
 .column-navigation button:not(.contact-us-button){
+.column-navigation button:not(.blue-button){
   border: none;
   background-color: white;
   font-family: 'Avenir';
@@ -35,6 +41,7 @@
 }
 
 .contact-us-button {
+.blue-button {
   padding: 10px 20px;
   background-color: #294463;
   color: white;
