@@ -24,6 +24,22 @@ Bank.prototype.getAccount = function(number){
       return this.accounts[i];
     }
   }
+  return null;
 };
 
-Bank.prototype.getTotalAssets = function(){};
+Bank.prototype.getTotalAssets = function(){
+  var balance = 0;
+  for (var i = 0; i < this.accounts.length; i++) {
+    for (var x in this.accounts[i].transactions){
+      for(var y in this.accounts[i].transactions[x]){
+        if(y === 'deposit'){
+          balance += this.accounts[i].transactions[x][y];
+        }
+        else {
+          balance -= this.accounts[i].transactions[x][y];
+        }
+      }
+    }
+  }
+  return balance;
+};
