@@ -11,12 +11,11 @@
 </head>
 <body>
   <div class="container">
-    <div data-view='img1' class="view">
-      <div class="border">
+    <div class="border">
+      <button data-view="img5" id="left-button"><i class="fas fa-angle-left"></i></button>
+      <button data-view="img2" id="right-button"><i class="fas fa-angle-right"></i></button>
+      <div data-view='img1' class="view">
         <img src="images/001.png" alt="Bulbasaur">
-          <button data-view="img5" id="left-button"><i class="fas fa-angle-left"></i></button>
-          <button data-view="img2" id="right-button"><i class="fas fa-angle-right"></i></button>
-
         <div class="page">
           <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
           <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
@@ -25,69 +24,50 @@
           <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
         </div>
       </div>
-    </div>
 
-    <div data-view='img2' class="view hidden">
-      <div class="border">
+      <div data-view="img2" class="view hidden">
         <img src="images/004.png" alt="Charmander">
-        <button data-view="img1" id="left-button"><i class="fas fa-angle-left"></i></button>
-        <button data-view="img3" id="right-button"><i class="fas fa-angle-right"></i></button>
-
         <div class="page">
-          <button data-view="img1" class="unselected-page"><i class="far fa-circle"></i></button>
-          <button data-view="img2" class="selected-page"><i class="fas fa-circle"></i></button>
+          <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
           <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
           <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
           <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
         </div>
       </div>
-    </div>
 
-    <div data-view='img3' class="view hidden">
-      <div class="border">
+      <div data-view="img3" class="view hidden">
         <img src="images/007.png" alt="Squirtle">
-        <button data-view="img2" id="left-button"><i class="fas fa-angle-left"></i></button>
-        <button data-view="img4" id="right-button"><i class="fas fa-angle-right"></i></button>
-
         <div class="page">
-          <button  data-view="img1" class="unselected-page"><i class="far fa-circle"></i></button>
           <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
-          <button data-view="img3" class="selected-page"><i class="fas fa-circle"></i></button>
+          <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
           <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
           <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
         </div>
       </div>
-    </div>
 
-    <div data-view='img4' class="view hidden">
-      <div class="border">
+      <div data-view="img4" class="view hidden">
         <img src="images/025.png" alt="Pikachu">
-          <button data-view="img3" id="left-button"><i class="fas fa-angle-left"></i></button>
-          <button data-view="img5" id="right-button"><i class="fas fa-angle-right"></i></button>
-
         <div class="page">
-          <button data-view="img1" class="unselected-page"><i class="far fa-circle"></i></button>
-          <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
-          <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
-          <button data-view="img4" class="selected-page"><i class="fas fa-circle"></i></button>
-          <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <div data-view='img5' class="view hidden">
-      <div class="border">
-        <img src="images/039.png" alt="JigglyPuff">
-          <button data-view="img4" id="left-button"><i class="fas fa-angle-left"></i></button>
-          <button data-view="img1" id="right-button"><i class="fas fa-angle-right"></i></button>
-
-        <div class="page">
-          <button data-view="img1" class="unselected-page"><i class="far fa-circle"></i></button>
           <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
           <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
           <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
-          <button data-view="img5" class="selected-page"><i class="fas fa-circle"></i></button>
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
+          <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
         </div>
+      </div>
+
+      <div data-view="img5" class="view hidden">
+        <img src="images/039.png" alt="JigglyPuff">
+        <div class="page">
+          <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
+        </div>
+      </div>
       </div>
     </div>
   </div>
