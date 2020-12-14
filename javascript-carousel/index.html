@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="border">
+      <button data-view="img5" id="left-button"><i class="fas fa-angle-left"></i></button>
+      <button data-view="img2" id="right-button"><i class="fas fa-angle-right"></i></button>
+      <div data-view='img1' class="view">
+        <img src="images/001.png" alt="Bulbasaur">
+        <div class="page">
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
+          <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
+        </div>
+      </div>
+
+      <div data-view="img2" class="view hidden">
+        <img src="images/004.png" alt="Charmander">
+        <div class="page">
+          <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
+          <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
+        </div>
+      </div>
+
+      <div data-view="img3" class="view hidden">
+        <img src="images/007.png" alt="Squirtle">
+        <div class="page">
+          <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
+          <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
+        </div>
+      </div>
+
+      <div data-view="img4" class="view hidden">
+        <img src="images/025.png" alt="Pikachu">
+        <div class="page">
+          <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
+          <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
+        </div>
+      </div>
+
+      <div data-view="img5" class="view hidden">
+        <img src="images/039.png" alt="JigglyPuff">
+        <div class="page">
+          <button data-view="img2" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img3" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img4" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img5" class="unselected-page"><i class="far fa-circle"></i></button>
+          <button data-view="img1" class="selected-page"><i class="fas fa-circle"></i></button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

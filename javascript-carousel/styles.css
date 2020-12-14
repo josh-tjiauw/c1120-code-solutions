@@ -1,0 +1,51 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.border {
+  border: solid black;
+  padding: 100px 200px;
+  position: relative;
+}
+
+#left-button {
+  font-size: 100px;
+  position: absolute;
+  left: 5px;
+  top: 300px;
+  border: none;
+  cursor: pointer;
+}
+
+#right-button {
+  font-size: 100px;
+  position: absolute;
+  right: 5px;
+  top: 300px;
+  border: none;
+  cursor: pointer;
+}
+
+.page {
+  display: inline;
+  font-size: 25px;
+  position: absolute;
+  bottom: 50px;
+  left: 342.5px;
+  border: none;
+  cursor: pointer;
+}
+
+.selected-page, .unselected-page {
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
