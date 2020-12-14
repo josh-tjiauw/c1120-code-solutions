@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  top: 450px;
+  left: 600px;
+  max-width: 1920px;
+  max-height: 1080px;
+  margin: auto;
+}
+
+span {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.black {
+  color: black;
+  border-bottom: solid black;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+  border-bottom: solid black;
+}
