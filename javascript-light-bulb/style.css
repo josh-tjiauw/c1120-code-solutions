@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1920px;
+  height: 1080px;
+}
+.outer-circle {
+  width: 500px;
+  height: 500px;
+  border: none;
+  border-radius: 900px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-black {
+  background-color: #111111;
+}
+
+.on {
+  background-color: #faea84;
+}
+
+.off {
+  background-color: gray;
+}
+
+.shadow {
+  box-shadow: 0px -25px black;
+}
