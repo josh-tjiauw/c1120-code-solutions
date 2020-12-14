@@ -1,0 +1,55 @@
+.container {
+  max-width: 1920px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 0.5;
+}
+
+.row {
+  display: flex;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+.column-one-fourth {
+  margin-right: 100px
+}
+.column-one-fourth img {
+  position: relative;
+  bottom: 25px;
+  left: 100px;
+
+}
+.header {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.main-text {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.learn-more-button {
+  border: solid #d96b66;
+  color: #d96b66;
+  background-color: white;
+  padding: 10px 40px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
