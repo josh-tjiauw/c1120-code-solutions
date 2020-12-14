@@ -30,16 +30,7 @@ Bank.prototype.getAccount = function(number){
 Bank.prototype.getTotalAssets = function(){
   var balance = 0;
   for (var i = 0; i < this.accounts.length; i++) {
-    for (var x in this.accounts[i].transactions){
-      for(var y in this.accounts[i].transactions[x]){
-        if(y === 'deposit'){
-          balance += this.accounts[i].transactions[x][y];
-        }
-        else {
-          balance -= this.accounts[i].transactions[x][y];
-        }
-      }
-    }
+    balance += this.accounts[i].getBalance();
   }
   return balance;
 };
