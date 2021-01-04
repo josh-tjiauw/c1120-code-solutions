@@ -1,0 +1,20 @@
+ul {
+  padding: 0px;
+}
+
+.bg-shade {
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.box {
+  border: solid gray;
+  border-width: 2px;
+  border-radius: 5px;
+  width: calc(100%/6);
+}
+
+.btn {
+  padding: 10px 30px;
+  margin: 20px;
+}
