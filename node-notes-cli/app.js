@@ -16,7 +16,9 @@ const create = () => {
   jsonFile.notes[jsonFile.nextId] = userInput;
   jsonFile.nextId++;
   const newData = JSON.stringify(jsonFile, null, 2);
-  fs.writeFile('./data.json', newData, 'utf8', ()=>console.log(jsonFile.notes));
+  fs.writeFile('./data.json', newData, 'utf8', (err) => {
+    if(err) throw err;
+  });
 });
 }
 
@@ -25,7 +27,9 @@ const del = () => {
   const indexToDelete = process.argv[3];
   delete jsonFile.notes[indexToDelete];
   const newData = JSON.stringify(jsonFile, null, 2);
-  fs.writeFile('./data.json', newData, 'utf8', () => console.log(jsonFile.notes));
+  fs.writeFile('./data.json', newData, 'utf8', (err) => {
+    if(err) throw err;
+  });
 });
 }
 
@@ -35,7 +39,9 @@ const update = (index) => {
     const userInput = process.argv[4];
     jsonFile.notes[index] = userInput;
     const newData = JSON.stringify(jsonFile, null, 2);
-    fs.writeFile('./data.json', newData, 'utf8', () => console.log(jsonFile.notes));
+    fs.writeFile('./data.json', newData, 'utf8', (err) => {
+      if(err) throw err;
+    });
   });
 }
 
