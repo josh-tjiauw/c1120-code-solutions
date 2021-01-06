@@ -1,0 +1,54 @@
+.container-fluid {
+  padding: 0px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px auto;
+}
+
+.box {
+  border: solid gray;
+  border-width: 2px;
+  border-radius: 5px;
+  margin: auto 15px;
+}
+
+.btn:not(#nav-sign-up) {
+  font-size: 20px;
+  width: 90%;
+  padding: 10px;
+  margin: 20px;
+}
+
+.line {
+  height: 10px;
+  background-color: gray;
+}
+
+.navbar:not(.col-4) {
+  margin: 0px;
+  border-bottom: solid rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+
+}
+
+.footer-line {
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 2px;
+  width: 82%;
+}
+
+.footer {
+  width: 82%;
+  margin: 0px auto;
+}
