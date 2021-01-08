@@ -21,7 +21,7 @@ app.get('/api/notes/:id', (req, res) => {
     const error400 = {error: "id must be a positive integer"}
     res.status(400).json(error400);
   }
-  else if(Number.isInteger(id) && id in notes) {
+  else if(id in notes) {
     res.json(notes[id]);
   }
   else{
