@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const data = require('./data.json')
 const notes = data.notes;
+const fs = require('fs');
+
 app.use(express.json());
 
 app.get('/api/notes', (req, res) => {
@@ -27,16 +29,28 @@ app.get('/api/notes/:id', (req, res) => {
   }
 })
 
+const update = (index, newNote) => {
+  fs.readFile('./data.json', 'utf8', (err, data) => {
+    if (err) throw err;
+    notes[index] = newNote;
+    const newData = JSON.stringify(data, null, 2);
+    fs.writeFile('data.json', newData, 'utf8', (err) => {
+      if (err) throw err;
+    });
+  });
+}
+
 app.post('/api/notes', (req, res) => {
-  if(req.body.content.length == 0){
+  if(!req.body.content){
     res.status(400).json({ "error": "content is a required field"})
   }
-  else if (req.body.content.length > 0){
+  else if (req.body.content){
     const newNote = {
       id: data.nextId,
       content: req.body.content
     };
     notes[data.nextId] = newNote;
+    update(data.nextId, notes[data.nextId]);
     data.nextId++;
     res.status(201).json(newNote)
   }
@@ -48,15 +62,18 @@ app.post('/api/notes', (req, res) => {
 
 app.delete('/api/notes/:id', (req, res) => {
   const id = req.params.id;
-  if(id <= 0){
-    res.status(400).json({"error": "id must be a positive integer"});
-  }
-  else if(id > 0 && notes[id] === undefined){
-    res.status(404).json({"error": `cannot find note with id ${id}`})
-  }
-  else if(id > 0 && id in notes){
-    delete notes[id];
-    res.status(204).send(204);
+  if(!isNaN(id)){
+    if (id <= 0) {
+      res.status(400).json({ "error": "id must be a positive integer" });
+    }
+    else if (id > 0 && notes[id] === undefined) {
+      res.status(404).json({ "error": `cannot find note with id ${id}` })
+    }
+    else if (id > 0 && id in notes) {
+      delete notes[id];
+      update(id, notes[id])
+      res.status(204).send(204);
+    }
   }
   else{
     res.status(500).json({"error": "An unexpected error occurred."})
@@ -65,20 +82,25 @@ app.delete('/api/notes/:id', (req, res) => {
 
 app.put('/api/notes/:id', (req, res) => {
   const id = req.params.id;
-  if (id <= 0){
-    res.status(400).json({ "error": "id must be a positive integer" })
+
+  if (!isNaN(id)) {
+    if (id <= 0) {
+      res.status(400).json({ "error": "id must be a positive integer" })
+    }
+    else if (!req.body.content) {
+      res.status(400).json({ "error": "content is a required field" })
+    }
+    else if (id > 0 && notes[id] === undefined) {
+      res.status(404).json({ "error": `cannot find note with id ${id}` })
+    }
+    else if (id > 0 && id in notes) {
+      const newNote = req.body.content;
+      notes[id].content = newNote;
+      update(id, notes[id]);
+      res.status(200).json(notes[id])
+    }
   }
-  else if(req.body.content.length == 0){
-    res.status(400).json({ "error": "content is a required field" })
-  }
-  else if(id > 0 && notes[id] === undefined){
-    res.status(404).json({ "error": `cannot find note with id ${id}`})
-  }
-  else if (id > 0 && id in notes){
-    const newNote = req.body.content;
-    notes[id].content = newNote;
-    res.status(200).json(notes[id])
-  }
+
   else {
     res.status(500).json({"error": "An unexpected error occurred."})
   }
