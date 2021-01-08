@@ -30,17 +30,6 @@ app.get('/api/notes/:id', (req, res) => {
   }
 })
 
-const update = (index, newNote) => {
-  fs.readFile('./data.json', 'utf8', (err, data) => {
-    if (err) throw err;
-    notes[index] = newNote;
-    const newData = JSON.stringify(data, null, 2);
-    fs.writeFile('data.json', newData, 'utf8', (err) => {
-      if (err) throw err;
-    });
-  });
-}
-
 app.post('/api/notes', (req, res) => {
   if(!req.body.content){
     res.status(400).json({ "error": "content is a required field"})
@@ -51,9 +40,14 @@ app.post('/api/notes', (req, res) => {
       content: req.body.content
     };
     notes[data.nextId] = newNote;
-    update(data.nextId, notes[data.nextId]);
-    data.nextId++;
-    res.status(201).json(newNote)
+    const newData = JSON.stringify(data, null, 2);
+    fs.writeFile('data.json', newData, 'utf8', (err) => {
+      if (err) {
+        res.status(500).json({ "error": "An unexpected error occurred." })
+      }
+      res.status(201).json(newNote)
+      data.nextId++;
+    });
   }
 })
 
@@ -69,8 +63,14 @@ app.delete('/api/notes/:id', (req, res) => {
     }
     else if (id in notes) {
       delete notes[id];
-      update(id, notes[id])
-      res.status(204).send(204);
+      notes[data.nextId] = notes[id];
+      const newData = JSON.stringify(data, null, 2);
+      fs.writeFile('data.json', newData, 'utf8', (err) => {
+        if (err) {
+          res.status(500).json({ "error": "An unexpected error occurred." })
+        }
+        res.status(204).send(204);
+      });
     }
   }
   else{
@@ -92,10 +92,15 @@ app.put('/api/notes/:id', (req, res) => {
       res.status(404).json({ "error": `cannot find note with id ${id}` })
     }
     else if (id in notes) {
-      const newNote = req.body.content;
-      notes[id].content = newNote;
-      update(id, notes[id]);
-      res.status(200).json(notes[id])
+      const updatedNote = req.body.content;
+      notes[id].content = req.body.content;
+      const newData = JSON.stringify(data, null, 2);
+      fs.writeFile('data.json', newData, 'utf8', (err) => {
+        if (err) {
+          res.status(500).json({ "error": "An unexpected error occurred." })
+        }
+        res.status(200).json(notes)
+      });
     }
   }
 
