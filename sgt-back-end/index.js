@@ -87,22 +87,24 @@ app.get('/api/grades/', (req, res, next) => {
 })
 
 app.post('/api/grades/', (req, res, next) => {
+  const params = [req.body.course, req.body.name, req.body.score]
+  if (params[0] === '' || params[1] === '' || params[2] === '') {
+    res.status(400).send('Cannot leave this field blank.')
+    return;
+  }
+  else if (params[2] < 1 || params[2] > 100) {
+    res.status(400).json('Score has to be between 1-100.')
+    return;
+  }
   const sql = `
   insert into "grades" ("course", "name", "score")
   values ($1, $2, $3)
   returning *
   `
-  const params = [req.body.course, req.body.name, req.body.score]
 
   db.query(sql, params)
     .then(result => {
       const grade = result.rows[0];
-      if (params[0] === '' || params[1] === '' || params[2] === '' ) {
-        res.status(400).send('Cannot leave this field blank.')
-      }
-      else if (params[2] < 1 || params[2] > 100) {
-        res.status(400).json('Score has to be between 1-100.')
-      }
       res.status(201).json(grade)
     })
 
