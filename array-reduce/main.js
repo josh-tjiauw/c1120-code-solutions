@@ -32,12 +32,7 @@ const balance = account.reduce((accumulator, currentValue) => {
 console.log(balance)
 
 const composite = traits.reduce((accumulator, currentValue) => {
-  for (let x in traits) {
-    let keyArr = Object.keys(traits[x])
-    let key = keyArr.pop()
-    accumulator[key] = traits[x][key]
-  }
-  return accumulator;
+  return Object.assign(accumulator, currentValue)
 }, {})
 
 console.log(composite)
