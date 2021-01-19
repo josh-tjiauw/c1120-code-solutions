@@ -1,0 +1,62 @@
+.btn-default {
+  background-color: rgb(187, 11, 114);
+  color: white;
+  padding: 10px 30px;
+  box-shadow: 5px 10px black;
+  margin: 15px;
+  font-size: 40px;
+}
+
+.btn-purple {
+  background-color: midnightblue;
+  color: white;
+  padding: 10px 30px;
+  box-shadow: 5px 10px black;
+  margin: 15px;
+  font-size: 40px;
+}
+
+.btn-lavender {
+  background-color: slateblue;
+  color: white;
+  padding: 10px 30px;
+  box-shadow: 5px 10px black;
+  margin: 15px;
+  font-size: 40px;
+}
+
+.btn-red {
+  background-color: indianred;
+  color: white;
+  padding: 10px 30px;
+  box-shadow: 5px 10px black;
+  margin: 15px;
+  font-size: 40px;
+}
+
+.btn-orange {
+  background-color: orange;
+  color: white;
+  padding: 10px 30px;
+  box-shadow: 5px 10px black;
+  margin: 15px;
+  font-size: 40px;
+}
+
+.btn-yellow {
+  background-color: yellow;
+  color: white;
+  padding: 10px 30px;
+  box-shadow: 5px 10px black;
+  margin: 15px;
+  font-size: 40px;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+  padding: 10px 30px;
+  box-shadow: 5px 10px black;
+  margin: 15px;
+  font-size: 40px;
+}
