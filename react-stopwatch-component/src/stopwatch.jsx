@@ -17,14 +17,14 @@ class Stopwatch extends React.Component{
 
   handleSwitch() {
     if(this.state.isTicking === false){
-      this.setState({isTicking: true, switchStartClass: "start hidden", switchPauseClass: "pause"})
+      this.setState({isTicking: true})
       this.timerID = setInterval(
       () => this.tick(),
       1000
     );
     }
     else{
-      this.setState({isTicking: false, switchStartClass: "start", switchPauseClass: "pause hidden"})
+      this.setState({isTicking: false})
       clearInterval(this.timerID);
     }
   }
