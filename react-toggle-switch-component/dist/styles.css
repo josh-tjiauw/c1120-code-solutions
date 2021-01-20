@@ -1,0 +1,52 @@
+body {
+  margin: 15px;
+}
+.bg-green {
+  border: solid black;
+  border-radius: 40%;
+  width: 50px;
+  height: 30px;
+  background-color: lightgreen;
+}
+
+.bg-gray {
+  border: solid black;
+  border-radius: 40%;
+  width: 50px;
+  height: 30px;
+  background-color: gray;
+}
+
+div:hover {
+  cursor: pointer;
+}
+
+.btn-on {
+  border: solid black;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  transform: translateX(20px);
+  background-color: white;
+}
+
+.btn-off {
+  border: solid black;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+}
+
+div {
+  position: relative;
+}
+
+.text {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 85px;
+  font-size: 30px;
+  font-weight: 800;
+}
