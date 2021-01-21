@@ -1,0 +1,31 @@
+body {
+  margin: 0px;
+}
+
+.topic-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  border: solid black;
+  margin: auto;
+  padding: 100px;
+}
+
+.header,
+.paragraph {
+  margin: 0px;
+  width: 450px;
+  border: solid black;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  margin: 0px;
+}
