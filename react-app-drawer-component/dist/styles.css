@@ -1,0 +1,28 @@
+body {
+  margin: 0px;
+}
+
+.page-container {
+  display: flex;
+  width: 1920px;
+  height: 975px;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.hidden {
+  display: none;
+}
+
+i {
+  font-size: 48px;
+}
+
+.menuDiv {
+  width: 200px;
+  height: 100%;
+  background-color: white;
+  color: black;
+}
