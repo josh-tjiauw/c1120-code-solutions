@@ -45,3 +45,13 @@ function reverseInParentheses(inputString) {
 
 const testFunc = reverseInParentheses('foo(barbaz)blim')
 console.log(testFunc)
+
+/*
+Best Solution With Regex
+function reverseInParentheses(inputString) {
+    while (inputString.includes('(')) {
+        inputString = inputString.replace(/\(([^()]*)\)/, (_, str) => [...str].reverse().join(''));
+    }
+    return inputString;
+}
+*/
