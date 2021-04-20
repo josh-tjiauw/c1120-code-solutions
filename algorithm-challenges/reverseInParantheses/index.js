@@ -1,14 +1,26 @@
 function reverseInParentheses(inputString) {
   let tf = false;
-  const start = inputString.indexOf('(');
-  const end = inputString.indexOf(')')
-  const test = inputString.split('').splice(start + 1, end - start - 1).reverse().join('');
-  const test2 = inputString.split('').splice(end + 1).join('');
-  console.log(test2)
-  const newStr = inputString.split('').splice(0, start).join('').concat(test).concat(test2)
-  console.log(newStr);
-  console.log(test)
-  return newStr;
+  const regex = /[(]/g;
+  var count = inputString.match(regex).length
+  console.log(count)
+  const rev = (input) => {
+    const start = input.indexOf('(');
+    const end = input.indexOf(')')
+    const test = input.split('').splice(start + 1, end - start - 1).reverse().join('');
+    const test2 = input.split('').splice(end + 1).join('');
+    const newStr = input.split('').splice(0, start).join('').concat(test).concat(test2);
+    return input.split('').splice(0, start).join('').concat(test).concat(test2);
+  }
+  let newStr = rev(inputString)
+  let i = 0;
+  while (i !== -1) {
+    if (newStr.includes('(')) {
+      newStr = rev(newStr);
+    } else {
+      i = -1;
+      return newStr;
+    }
+  }
 }
 
-reverseInParentheses('foobar(baz)blim')
+reverseInParentheses('foo(bar(baz))blim')
