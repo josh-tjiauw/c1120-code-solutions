@@ -43,5 +43,5 @@ function reverseInParentheses(inputString) {
   return outputString;
 }
 
-const hahaxd = reverseInParentheses('foo(barbaz)blim')
-console.log(hahaxd)
+const testFunc = reverseInParentheses('foo(barbaz)blim')
+console.log(testFunc)
