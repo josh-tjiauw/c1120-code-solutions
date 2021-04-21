@@ -10,11 +10,10 @@ function areSimilar(a, b) {
       if (bIndex === i) {
         similar = true;
       } else {
-        const saved = b[bIndex];
-        const index2 = a.indexOf(saved)
-        console.log('index2', index2)
-        b[bIndex] = a[i];
-        b[index2] = saved;
+        const save = b[i];
+        const findIndex = b.indexOf(a[i]);
+        b[i] = a[i];
+        b[findIndex] = save;
         console.log(b)
         similar = false;
         counter++;
