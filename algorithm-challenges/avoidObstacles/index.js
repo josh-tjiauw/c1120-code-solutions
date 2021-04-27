@@ -14,3 +14,13 @@ function avoidObstacles(inputArray) {
 }
 
 console.log(avoidObstacles([999, 1000]))
+
+/*Best answer using some()
+function avoidObstacles(inputArray) {
+  var jump = 2;
+  while (inputArray.some((obstacle) => obstacle % jump == 0)) {
+    jump++;
+  }
+  return jump;
+}
+*/
