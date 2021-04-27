@@ -9,7 +9,7 @@ function isIPv4Address(inputString) {
       return false
     }
 
-    if (index === '' || index > 255) {
+    if (index === '' || index > 255 || isNaN(index)) {
       return false
     }
 
